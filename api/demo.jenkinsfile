@@ -60,6 +60,8 @@ pipeline {
                     // 设置构建的显示名称
                     currentBuild.displayName = "#${env.BUILD_NUMBER}-测试"
                     currentBuild.description = "${env.description}-${env.DATETIME}"
+                    def buildNumber = env.BUILD_NUMBER.toString()
+                    println("构建编号（字符串）: ${buildNumber}")
 
                     println("构建编号:${env.BUILD_NUMBER}")
                     println("构建人: ${env.BUILD_USER_ID}") 
