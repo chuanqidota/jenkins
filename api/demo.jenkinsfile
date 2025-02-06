@@ -61,7 +61,7 @@ pipeline {
                     currentBuild.displayName = "#${env.BUILD_NUMBER}-测试"
                     currentBuild.description = "${env.description}-${env.DATETIME}"
 
-
+                    println("构建编号:${env.BUILD_NUMBER}")
                     println("构建人: ${env.BUILD_USER_ID}") 
                     println("构建人邮箱: ${env.BUILD_USER_EMAIL}")
                     println("时间:${env.DATETIME}")
