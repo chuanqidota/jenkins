@@ -67,6 +67,7 @@ pipeline {
                     println("构建人: ${env.BUILD_USER_ID}") 
                     println("构建人邮箱: ${env.BUILD_USER_EMAIL}")
                     println("时间:${env.DATETIME}")
+                    // 使用readJson 需要安装插件 Pipeline Utility Steps
                     def data = readJSON text: "${env.jsonData}"
                     println(data.name)
 
