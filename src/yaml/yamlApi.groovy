@@ -1,7 +1,7 @@
 def sdkVersionAnalysis(lang,defsdk){
     def sdkVersion
     def result = [:]
-    def ymlFile = new File(".matrix.yml")
+    def ymlFile = new File("/Users/jinang/.jenkins/workspace/demo/.matrix.yml")
     def jsonFile = new File(".package.json")
     def existsYml = ymlFile.exists()
     try{
