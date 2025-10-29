@@ -15,6 +15,7 @@ pipeline {
         stage("初始化") {
             steps {
                 script{
+                    echo """
                     yamlapi.sdkVersionAnalysis("java","java")
                 }
             }
