@@ -1,0 +1,22 @@
+def yamapi = new yaml.yamlApi()
+
+pipeline {
+    // 指定调用的nginx-slave节点
+    // agent { 
+    //     node {  
+    //         label "master"   //指定运行节点的标签或者名称
+    //         customWorkspace "${workspace}"   //指定运行工作目录（可选）
+    //     }
+    // }
+
+    agent any
+    stages {
+        stage("初始化") {
+            steps {
+                yamlapi.sdkVersionAnalysis("java","java")
+
+            }
+        }
+    }
+
+}
