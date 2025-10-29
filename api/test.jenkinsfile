@@ -1,3 +1,4 @@
+@Library('jenkins@main') _
 def yamapi = new yaml.yamlApi()
 
 pipeline {
