@@ -21,7 +21,7 @@ def sdkVersionAnalysis(lang,defsdk){
     println((existsYml ? ".matrix.yml:\n" : "package.json\n:") + buildStatusCheck)
     if(existsYml){
         buildStatusCheck = sh(returnStdout: true, script: '''
-            python3 -c "import yaml; print(yaml.safe_load(open('.matrix.yml')))"
+            python3 -c "import yaml; print(yaml.safe_load(open('/Users/jinang/.jenkins/workspace/demo/.matrix.yml')))"
         ''')
     }
     def responseMap =  new groovy.json.JsonSlurper().parseText(buildStatusCheck) as Map
